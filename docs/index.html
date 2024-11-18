@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-    <title>Quick Ask - GPT-4 Chrome Extension</title>
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <title>Quick Ask</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
     <style>
         :root {
@@ -127,12 +127,87 @@
         .cta-button:hover {
             transform: scale(1.05);
         }
+
+        .nav {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .nav-logo {
+            width: 24px;
+            height: 24px;
+        }
+
+        .nav-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* 既存のスタイルをそのまま使用 */
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --background: #f8fafc;
+            --text: #1e293b;
+        }
     </style>
 </head>
 
 <body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="./images/favicon.svg" alt="Quick Ask" class="nav-logo">
+                <span class="nav-title">Quick Ask</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">ホーム</a>
+                <a href="usage.html" class="nav-link">使い方</a>
+            </div>
+        </div>
+    </nav>
+
     <header class="header">
-        <h1>Quick Ask</h1>
+        <h1>
+            Quick Ask
+        </h1>
         <p> LLM に気軽に質問できる Chrome 拡張機能</p>
     </header>
 
@@ -158,29 +233,15 @@
                     <div class="feature-icon">
                         <i class="fas fa-magic"></i>
                     </div>
-                    <h3>Custom Asking 1</h3>
-                    <p>カスタマイズ可能な質問機能。よく使う質問をプリセットとして保存できます。</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-wand-magic-sparkles"></i>
-                    </div>
-                    <h3>Custom Asking 2</h3>
-                    <p>カスタマイズ可能な質問機能。よく使う質問をプリセットとして保存できます。</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>Custom Asking 3</h3>
-                    <p>カスタマイズ可能な質問機能。よく使う質問をプリセットとして保存できます。</p>
+                    <h3>Custom Setting</h3>
+                    <p>カスタマイズ可能な質問機能。よく使うシステムプロンプトをプリセットとして保存できます。</p>
                 </div>
             </div>
         </section>
 
         <section class="cta">
             <h2>今すぐ始めましょう</h2>
-            <p style="margin-bottom: 2rem;">Quick Askで、ブラウジング体験を革新的に向上させましょう。</p>
+            <p style="margin-bottom: 2rem;">Quick Askでブラウジング体験に革新を！</p>
             <a href="#" class="cta-button">インストールする</a>
         </section>
     </div>

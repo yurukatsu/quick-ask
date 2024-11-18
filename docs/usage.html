@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <title>使い方 - Quick Ask</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <style>
+        /* 共通のスタイル定義を含める */
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --background: #f8fafc;
+            --text: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--background);
+        }
+
+        .nav {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .nav-logo {
+            width: 24px;
+            height: 24px;
+        }
+
+        .nav-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .usage-header {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .usage-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .usage-section {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .usage-section h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            gap: 1.5rem;
+        }
+
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .feature-usage {
+            border-left: 4px solid var(--primary);
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature-usage h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .tip {
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="./images/favicon.svg" alt="Quick Ask" class="nav-logo">
+                <span class="nav-title">Quick Ask</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">ホーム</a>
+                <a href="usage.html" class="nav-link">使い方</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="usage-header">
+        <h1>Quick Ask の使い方</h1>
+        <p>シンプルで直感的な操作方法をご紹介します</p>
+    </header>
+
+    <div class="container">
+        <section class="usage-section">
+            <h2>基本的な使い方</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>拡張機能のインストール</h3>
+                    <p>Chrome ウェブストアから Quick Ask をインストールします。インストール後、ブラウザ右上に Quick Ask のアイコンが表示されます。</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>テキストの選択</h3>
+                    <p>ウェブページ上で翻訳や要約したいテキストを選択します。</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>機能の選択</h3>
+                    <p>選択したテキストを右クリックし、表示されるメニューから希望の機能を選択します。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="usage-section">
+            <h2>機能別の使い方</h2>
+
+            <div class="feature-usage">
+                <h3>Translation（翻訳）</h3>
+                <p>テキストを選択し、右クリックメニューから「Translate」を選択するだけで、即座に翻訳結果が表示されます。</p>
+                <div class="tip">
+                    <strong>Tip:</strong> 翻訳先の言語は設定画面でデフォルト値を指定できます。
+                </div>
+            </div>
+
+            <div class="feature-usage">
+                <h3>Summarization（要約）</h3>
+                <p>長い文章を選択し、「Summarize」を選択すると、重要なポイントを抽出した要約が表示されます。</p>
+                <div class="tip">
+                    <strong>Tip:</strong> 要約の長さは設定画面でカスタマイズ可能です。
+                </div>
+            </div>
+
+            <div class="feature-usage">
+                <h3>Custom Setting（カスタム設定）</h3>
+                <p>頻繁に使用する質問パターンをプリセットとして保存できます。システムプロンプトをカスタマイズすることで、より精度の高い回答を得ることができます。</p>
+                <div class="tip">
+                    <strong>Tip:</strong> プリセットは最大3つまで保存可能です。目的に応じて使い分けることをおすすめします。
+                </div>
+            </div>
+        </section>
+
+        <section class="usage-section">
+            <h2>カスタマイズのヒント</h2>
+            <p>Quick Ask は、あなたの使用パターンに合わせて最適化できます。以下のようなカスタマイズがおすすめです：</p>
+            <ul style="list-style-type: none; margin-top: 1rem;">
+                <li style="margin-bottom: 1rem;">
+                    <i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i>
+                    翻訳時によく使用する言語ペアを設定
+                </li>
+                <li style="margin-bottom: 1rem;">
+                    <i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i>
+                    要約の出力形式をカスタマイズ（箇条書き/段落形式）
+                </li>
+                <li style="margin-bottom: 1rem;">
+                    <i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i>
+                    頻繁に使用する質問パターンをプリセットとして保存
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>
