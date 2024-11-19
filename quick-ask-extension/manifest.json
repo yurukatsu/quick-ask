@@ -1,0 +1,64 @@
+{
+    "manifest_version": 3,
+    "name": "Quick Ask",
+    "version": "1.0",
+    "description": "Quick LLM assistant for translation, summarization, and custom queries",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "contextMenus",
+        "scripting",
+        "commands"
+    ],
+    "host_permissions": [
+        "https://*.openai.azure.com/*"
+    ],
+    "options_page": "options/options.html",
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "background": {
+        "service_worker": "scripts/background.js",
+        "type": "module"
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "commands": {
+        "translate": {
+            "suggested_key": {
+                "default": "Alt+T",
+                "mac": "Ctrl+T"
+            },
+            "description": "Translate selected text"
+        },
+        "summarize": {
+            "suggested_key": {
+                "default": "Alt+S",
+                "mac": "Ctrl+S"
+            },
+            "description": "Summarize selected text"
+        },
+        "custom1": {
+            "suggested_key": {
+                "default": "Alt+1",
+                "mac": "Ctrl+1"
+            },
+            "description": "Custom Action 1"
+        },
+        "custom2": {
+            "suggested_key": {
+                "default": "Alt+2",
+                "mac": "Ctrl+2"
+            },
+            "description": "Custom Action 2"
+        }
+    }
+}

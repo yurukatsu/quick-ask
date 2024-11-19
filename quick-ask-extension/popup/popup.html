@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="tab-container">
+            <button class="tab-button active" data-tab="translation">Translation</button>
+            <button class="tab-button" data-tab="summarization">Summarization</button>
+            <button class="tab-button" data-tab="custom">Custom</button>
+        </div>
+
+        <div class="content-container">
+            <div class="tab-content active" id="translation">
+                <textarea id="translation-input" placeholder="Enter text to translate..."></textarea>
+                <button id="translate-button">Translate</button>
+                <div class="result-container">
+                    <div class="result-header">
+                        <span class="result-title">Result</span>
+                        <button class="copy-button" data-result="translation-result">
+                            <svg class="copy-icon" viewBox="0 0 24 24" width="16" height="16">
+                                <path
+                                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+                            </svg>
+                            Copy
+                        </button>
+                    </div>
+                    <div id="translation-result" class="result"></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="summarization">
+                <textarea id="summarization-input" placeholder="Enter text to summarize..."></textarea>
+                <button id="summarize-button">Summarize</button>
+                <div class="result-container">
+                    <div class="result-header">
+                        <span class="result-title">Result</span>
+                        <button class="copy-button" data-result="summarization-result">
+                            <svg class="copy-icon" viewBox="0 0 24 24" width="16" height="16">
+                                <path
+                                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+                            </svg>
+                            Copy
+                        </button>
+                    </div>
+                    <div id="summarization-result" class="result"></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="custom">
+                <div class="prompt-selector">
+                    <button class="prompt-button active" data-prompt="1">Custom 1</button>
+                    <button class="prompt-button" data-prompt="2">Custom 2</button>
+                    <button class="prompt-button" data-prompt="3">Custom 3</button>
+                </div>
+                <textarea id="custom-input" placeholder="Enter your text..."></textarea>
+                <button id="ask-button">Generate</button>
+                <div class="result-container">
+                    <div class="result-header">
+                        <span class="result-title">Result</span>
+                        <button class="copy-button" data-result="custom-result">
+                            <svg class="copy-icon" viewBox="0 0 24 24" width="16" height="16">
+                                <path
+                                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+                            </svg>
+                            Copy
+                        </button>
+                    </div>
+                    <div id="custom-result" class="result"></div>
+                </div>
+            </div>
+        </div>
+        <script src="../modules/translation.js"></script>
+        <script src="../modules/summarization.js"></script>
+        <script src="../modules/customAsking.js"></script>
+        <script src="popup.js"></script>
+</body>
+
+</html>

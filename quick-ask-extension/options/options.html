@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quick Ask Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Quick Ask Settings</h1>
+
+        <div class="settings-section">
+            <div class="section-header">
+                <h2>Azure OpenAI API Configuration</h2>
+                <button class="reset-button" data-section="api">Reset to Default</button>
+            </div>
+            <div class="form-group azure-only">
+                <label for="azure-endpoint">Azure OpenAI Endpoint</label>
+                <input type="text" id="azure-endpoint" placeholder="https://your-resource.openai.azure.com">
+            </div>
+
+            <div class="form-group">
+                <label for="api-key">API Key</label>
+                <input type="password" id="api-key" placeholder="Enter your API key">
+            </div>
+
+            <div class="form-group">
+                <label for="api-version">API Version</label>
+                <input type="text" id="api-version" placeholder="2024-08-01-preview">
+            </div>
+
+            <div class="form-group azure-only">
+                <label for="deployment-name">Deployment Name</label>
+                <input type="text" id="deployment-name" placeholder="gpt-4o-mini">
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <div class="section-header">
+                <h2>General Settings</h2>
+                <button class="reset-button" data-section="general">Reset to Default</button>
+            </div>
+            <div class="form-group">
+                <label for="target-language">Default Target Language</label>
+                <select id="target-language">
+                    <option value="Japanese">Japanese</option>
+                    <option value="English">English</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="Portuguese">Portuguese</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Mandarin">Mandarin</option>
+                    <option value="Korean">Korean</option>
+                    <option value="Russian">Russian</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <div class="section-header">
+                <h2>Translation Settings</h2>
+                <button class="reset-button" data-section="translation">Reset to Default</button>
+            </div>
+            <div class="form-group">
+                <label for="translation-system-prompt">System Prompt</label>
+                <textarea id="translation-system-prompt" name="story" rows="10"></textarea>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <div class="section-header">
+                <h2>Summarization Settings</h2>
+                <button class="reset-button" data-section="summarization">Reset to Default</button>
+            </div>
+            <div class="form-group">
+                <label for="summarization-system-prompt">System Prompt</label>
+                <textarea id="summarization-system-prompt" name="story" rows="10"></textarea>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <div class="section-header">
+                <h2>Custom Prompt Settings 1</h2>
+                <button class="reset-button" data-section="custom1">Reset to Default</button>
+            </div>
+            <div class="form-group">
+                <label for="custom-system-prompt-1">System Prompt</label>
+                <textarea id="custom-system-prompt-1" name="story" rows="10"
+                    placeholder="Input your custom system prompt."></textarea>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <div class="section-header">
+                <h2>Custom Prompt Settings 2</h2>
+                <button class="reset-button" data-section="custom2">Reset to Default</button>
+            </div>
+            <div class="form-group">
+                <label for="custom-system-prompt-2">System Prompt</label>
+                <textarea id="custom-system-prompt-2" name="story" rows="10"
+                    placeholder="Input your custom system prompt."></textarea>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <div class="section-header">
+                <h2>Custom Prompt Settings 3</h2>
+                <button class="reset-button" data-section="custom3">Reset to Default</button>
+            </div>
+            <div class="form-group">
+                <label for="custom-system-prompt-3">System Prompt</label>
+                <textarea id="custom-system-prompt-3" name="story" rows="10"
+                    placeholder="Input your custom system prompt."></textarea>
+            </div>
+        </div>
+
+        <button id="save-button">Save Settings</button>
+        <div id="status" class="status"></div>
+        <script src="options.js"></script>
+</body>
+
+</html>
